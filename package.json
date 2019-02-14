@@ -57,9 +57,10 @@
     "build": "babel app.js api -d dist/api --source-root app.js --copy-files && npm run move-app",
     "move-app": "mv dist/api/app.js dist/app.js",
     "prod": "npm run build && node dist/app.js",
-    "test:unit": "clear && mocha --require babel-polyfill --require babel-register test/unit/**/*.spec.js",
     "test:bundle": "npm run build && $(npm bin)/babel test -d dist/test --copy-files && rm -rf dist/test/unit",
-    "test:api": "npm run docker:compose && npm run test:bundle && swagger project test dist",
+    "test:unit": "clear && mocha --require babel-polyfill --require babel-register test/unit/**/*.spec.js",
+    "test:api": "npm run test:bundle && swagger project test dist",
+    "test": "npm run test:unit && npm run test:api",
     "start": "npm run prod"
   },
   "directories": {
