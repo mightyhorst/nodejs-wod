@@ -20,8 +20,9 @@ Install and run
 
 or with docker:
 1. Start elasticsearch: `docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:6.6.0`
-2. Start app: `docker run -p 8080:10010 --name nodejs-wod nodejs-wod`
-3. Open `http://localhost:8080/api-docs`
+2. Build image: `docker image build -t nodejs-wod .`
+3. Start app: `docker run -p 8080:10010 --name nodejs-wod nodejs-wod`
+4. Open `http://localhost:8080/api-docs`
 
 
 
