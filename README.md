@@ -66,6 +66,8 @@ or with docker:
 
 # Development Process
 
+![Architecture](https://s3-ap-southeast-2.amazonaws.com/tabcorp.flickr.angular.assets/images/dev-lifecycle.png)
+
 | Sprint      | Description |
 | ----------- | ----------- | 
 | Plan      | `Plan > Architecture > Analysis` | 
