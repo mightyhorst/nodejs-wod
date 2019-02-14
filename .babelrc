@@ -1,0 +1,43 @@
+{
+    "presets": ["es2015", "stage-0", "env"],
+    "plugins": [
+        "transform-strict-mode",
+        "transform-es2015-modules-commonjs",
+        "transform-es2015-spread",
+        "transform-es2015-destructuring",
+        "transform-es2015-parameters",
+        [
+            "babel-root-import", [
+                {
+                    "rootPathPrefix": "~",
+                    "rootPathSuffix": "api"
+                }, 
+                {
+                    "rootPathPrefix": "modules",
+                    "rootPathSuffix": "node_modules"
+                }, 
+                {
+                    "rootPathPrefix": "@",
+                    "rootPathSuffix": "dist"
+                }
+            ]
+        ],
+        [
+            "babel-plugin-relative-path-import",
+            {
+                "paths": [
+                    {
+                        "rootPathPrefix": "@env", // `@` is the default so you can remove this if you want
+                        "rootPathSuffix": "./"
+                    }
+                ]
+            }
+        ],
+        [
+            "transform-runtime", {
+                "polyfill": false,
+                "regenerator": true
+            }
+        ]
+    ]
+}

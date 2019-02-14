@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+  - "9"
+
+services:
+  - docker
+
+# env:
+#   global:
+  
+
+before_install:
+  - npm i -g mocha nyc swagger babel
+
+install:
+  - npm i 
+
+script: 
+  - npm test 
+  # - npm run lint
+
+deploy:
+  provider: script
+  script: npm run deploy
+  on:
+    branch: master  
+  

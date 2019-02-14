@@ -130,8 +130,9 @@ or with docker:
 Setup Github, Dockerhub and CI/CD pipeline
 
 ### 2. Init
-Initialize the libraries and dependencies we will use:
+Initialize the libraries and dependencies we will use and setup babel:
 
+```
 *ES6 Support*
 * babel 
 
@@ -154,6 +155,8 @@ Initialize the libraries and dependencies we will use:
 *platforms*
 * elasticsearch 
 
+```
+
 *Steps*
 * `2.1` `npm init`
 * `2.2` Update `package.json` and run `npm i`
@@ -163,6 +166,7 @@ Initialize the libraries and dependencies we will use:
 ### 3. Middleware + Errors
 This is common stuff we will use:
 *Errors*
+```
 * HttpError
 * ConfigError
 * DatabaseError
@@ -171,11 +175,14 @@ This is common stuff we will use:
 * ModelError
 * ModelNotFoundError
 * ModelValidationError
+```
 
 *Middleware*
+```
 * cors
 * not found error
 * error handling 
+```
 
 *Tests*
 * Unit test for error handling 
@@ -188,11 +195,15 @@ This is common stuff we will use:
 
 ### 4. Models and Contracts 
 *Models*
+```
 * Model - super class for validation
 * LoginEntry - represnts the login entry to return from the service
+```
 
 *Contracts*
+```
 * DateRangeContract - strongly typed and validated contract to make sure we only send valid queries to elastic search 
+```
 
 *Steps*
 * `4.1.` Run `mocha --require babel-polyfill --require babel-register test/unit/models`
@@ -203,8 +214,10 @@ This is common stuff we will use:
 
 ### 5. Services
 *Services*
+```
 * elasticsearch - elastic search js SDK
 * ElasticSearchService - testable facade for valid querying of the DAL
+```
 
 
 *Steps*
@@ -216,13 +229,19 @@ This is common stuff we will use:
 
 ### 5. Controllers
 *Unit - tests*
+```
 * search 
+```
 
 *API - tests*
+```
 * stand up docker compose then run 
+```
 
 *Controllers*
+```
 * search - performs the search 
+```
 
 
 *Steps*
