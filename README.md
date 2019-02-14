@@ -50,7 +50,7 @@ or with docker:
 | `Zipkin` | distributed tracing system. |
 | `Prometheus` | Open source monitoring system |
 | `Grafana` | Data visualization & Monitoring |
-| `DejaVu` | Web UI for Elasticsearch |
+| `Kibana` | Web UI for Elasticsearch |
 
 #### Infra Architecture 
 | Platform | Description |
