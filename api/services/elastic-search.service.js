@@ -1,4 +1,4 @@
-process.env.ELASTICSEARCH_INDEX = 'wod';
+const ELASTICSEARCH_INDEX = process.env.ELASTICSEARCH_INDEX || 'wod';
 
 /**
 * Imports 
@@ -54,7 +54,7 @@ export class ElasticSearchService{
         if(dateRangeContract.constructor.name !== 'DateRangeContract') throw new TypeError('expected a DateRangeContract');
         
 	    return this.client.search({
-	            index: process.env.ELASTICSEARCH_INDEX,
+	            index: ELASTICSEARCH_INDEX,
 	            body: dateRangeContract.toElasticSearchQuery()
 	        })
 	        .then(resp => {

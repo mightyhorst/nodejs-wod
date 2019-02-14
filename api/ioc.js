@@ -1,4 +1,4 @@
-process.env.ELASTICSEARCH_HOST = 'localhost:9200';
+const ELASTICSEARCH_HOST = process.env.ELASTICSEARCH_HOST || 'localhost:9200';
 
 /**
 * Imports
@@ -12,7 +12,7 @@ import {ElasticSearchService} from './services/index';
 * Vendor 
 **/
 const elasticSearchVendor = new elasticSearch.Client({
-    host: process.env.ELASTICSEARCH_HOST,
+    host: ELASTICSEARCH_HOST,
     log: 'trace'
 });
 
