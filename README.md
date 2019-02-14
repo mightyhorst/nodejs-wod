@@ -14,10 +14,15 @@ Install and run
     * `npm test`
     * `npm run test:unit`
     * `npm run test:api`
-4. Serve locally: `npm run dev`
+4. Start elasticsearch: `docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:6.6.0`    
+5. Serve locally: `npm run dev`
+6. Open `http://localhost:10010/api-docs`
 
 or with docker:
-    * `docker-compose up -d`
+    * Start elasticsearch: `docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:6.6.0`
+    * Start app: `docker run -p 8080:10010 --name nodejs-wod nodejs-wod`
+    * Open `http://localhost:8080/api-docs`
+
 
 
 # Architecture 

@@ -3,7 +3,13 @@
   "version": "0.1.1",
   "private": true,
   "description": "NodeJS Workout of the Day",
-  "keywords": ["nodejs", "expressjs", "swagger", "babel", "elasticsearch"],
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "swagger",
+    "babel",
+    "elasticsearch"
+  ],
   "author": "Nick Mitchell nick@kitset.io",
   "license": "",
   "main": "app.js",
