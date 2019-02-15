@@ -52,11 +52,12 @@
   "scripts": {
     "edit": "swagger project edit",
     "docker:compose": "bash cicd/docker_compose.sh",
+    "swagger:update": "sed -i -e 's/host: localhost:10010/host: api.doe.kitset.io:10010/g' dist/api/swagger/swagger.yaml",
     "deploy": "bash cicd/docker_push.sh",
     "dev": "nodemon app.js --exec babel-node",
     "build": "babel app.js api -d dist/api --source-root app.js --copy-files && npm run move-app",
     "move-app": "mv dist/api/app.js dist/app.js",
-    "prod": "npm run build && node dist/app.js",
+    "prod": "npm run build && npm run swagger:update && node dist/app.js",
     "test:bundle": "npm run build && $(npm bin)/babel test -d dist/test --copy-files && rm -rf dist/test/unit",
     "test:unit": "clear && mocha --require babel-polyfill --require babel-register test/unit/**/*.spec.js",
     "test:api": "npm run test:bundle && swagger project test dist",

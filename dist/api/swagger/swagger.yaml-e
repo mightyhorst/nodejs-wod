@@ -3,7 +3,7 @@ info:
   version: "0.1.1"
   title: NodeJs Workout of the Day App
 
-host: api.doe.kitset.io:10010
+host: localhost:10010
 basePath: /api/v1
 schemes:
   - http

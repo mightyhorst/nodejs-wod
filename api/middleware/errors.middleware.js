@@ -19,7 +19,7 @@ export function errorHandler(err, req, res, next) {
             console.error('Swagger operation is missing: ', err.message);
         }
     }
-    // console.error('middleware.errorHandler.err ---> ', {'err.failedValidation ':err.failedValidation , 'middleware.errorHandler.err.constructor.name':err.constructor.name, 'middleware.errorHandler.err':err.message, 'err instanceof HttpError': err instanceof HttpError});
+    console.error('middleware.errorHandler.err ---> ', {'err.failedValidation ':err.failedValidation , 'middleware.errorHandler.err.constructor.name':err.constructor.name, 'middleware.errorHandler.err':err.message, 'err instanceof HttpError': err instanceof HttpError});
 
     /**
     * Swagger Validation errors
