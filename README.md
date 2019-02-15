@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/mitni455/nodejs-wod.svg?branch=master)](https://travis-ci.org/mitni455/nodejs-wod)
 
 # Quick Links 
-* [Online Demo](http://api.doe.kitset.io/)
+* [Online Demo](http://api.doe.kitset.io/api/v1/logins?start=2001-11-12&end=2020-01-02)
 * [Swagger API Docs](http://api.doe.kitset.io/api-docs)
 
 
