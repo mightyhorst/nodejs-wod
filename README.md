@@ -3,18 +3,19 @@
 # Quick Links 
 * [Online Demo](http://api.doe.kitset.io/api/v1/logins?start=2001-11-12&end=2020-01-02)
 * [Swagger API Docs](http://api.doe.kitset.io/api-docs)
-
+* [Spinakker pipelines (unsecured)](http://spinnaker-deck.doe.kitset.io/#/applications/wod/clusters)
+* [Traefik routes (unsecured)](http://dashboard.doe.kitset.io/dashboard/)
 
 
 # Quick Start 
 Install and run 
 1. Clone: `git clone https://github.com/mitni455/nodejs-wod.git`
 2. Install dependencies: `npm i`
-3. Run tests 
-    * `npm test`
+3. Start elasticsearch: `docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:6.6.0`
+4. Run tests 
+    * `npm test` or
     * `npm run test:unit`
-    * `npm run test:api`
-4. Start elasticsearch: `docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:6.6.0`    
+    * `npm run test:api`   
 5. Serve locally: `npm run dev`
 6. Open `http://localhost:10010/api-docs`
 
@@ -69,10 +70,17 @@ or with docker:
 | `Helm` | Kubernetes Package Manager |
 | `Spinnaker` | CD for Kubernetes |
 
+Here are the [Spinakker pipelines (unsecured)](http://spinnaker-deck.doe.kitset.io/#/applications/wod/clusters)
+![Spinnaker](https://i.ibb.co/Jy0RtD6/Screen-Shot-2019-02-18-at-10-14-25-AM.png)
+
+
+Here are the [Traefik routes](http://dashboard.doe.kitset.io/dashboard/)
+![Spinnaker](https://i.ibb.co/98zQDYP/Screen-Shot-2019-02-18-at-10-14-37-AM.png)
+
+
+
 
 # Development Process
-
-![Architecture](https://s3-ap-southeast-2.amazonaws.com/tabcorp.flickr.angular.assets/images/dev-lifecycle.png)
 
 | Sprint      | Description |
 | ----------- | ----------- | 
@@ -274,7 +282,7 @@ Setup
 
 ### Object Orientated vs Functional Programming 
 * `OO - MVVM/MVC` - controllers, services, models, errors...
-* `FP` - transforms 
+* `FP` - transforms, value streams, debouncing, ect 
 
 ### TypeScript vs Babel ES6
 * `ES6` - for simplicity 
